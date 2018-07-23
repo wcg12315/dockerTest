@@ -47,7 +47,6 @@
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
-                <version>VERSION GOES HERE</version>
                 <configuration>
                     <imageName>microservice-discovery-eureka-dockerfile</imageName>
                     <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
