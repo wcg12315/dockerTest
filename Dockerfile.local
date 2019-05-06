@@ -1,0 +1,13 @@
+# Main
+FROM java:8
+
+VOLUME /tmp
+
+COPY entrypoint.sh entrypoint.sh
+COPY /build/libs/MicroServiceEureka-1.0.jar MicroServiceEureka.jar
+
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+echo "Asia/Shanghai" > /etc/timezone && \
+chmod +x entrypoint.sh
+
+ENTRYPOINT ["./entrypoint.sh"]
